@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -13,17 +19,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +30,117 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  column-gap: 0px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .row {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .row {
+    grid-template-columns: 0fr 1fr 0fr;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row {
+    grid-template-columns: 0fr 1fr 0fr;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+.row-content {
+  grid-column: 2;
+}
+
+header {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+header .row-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header img {
+  flex-grow: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  flex-grow: 1;
+}
+
+header ul {
+  /*min-width: 380px;*/
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+
+header li {
+  display: inline-block;
+  margin: 10px;
+  width: auto;
+}
+
+header a {
+  font-family: Karla, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none; 
+}
+@media only screen and (max-width: 700px) {
+  header a {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header .row-content {
+    display: block;
+  }
+  header nav {
+    justify-content: center;
+  }
+  header ul {
+    min-width:auto;
+  }
+  header li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+footer {
+  background-color: #495E57;
+  color: white;
+}
+#footer-row-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }

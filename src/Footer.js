@@ -3,6 +3,8 @@ import chef_image from './Assets/restaurant chef B.jpg'
 function Footer () {
     return (
         <footer>
+        <div class="row" id="row-footer">
+        <div class="row-content" id="footer-row-content">
             <img 
                 src = {chef_image}
                 alt = "A chef preparing food"
@@ -37,6 +39,8 @@ function Footer () {
                     <li><a href = "twitter.com">Twitter</a></li>
                 </ul></nav>
             </div>
+        </div>
+        </div>
         </footer>
     );
 }

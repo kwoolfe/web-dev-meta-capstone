@@ -2,7 +2,8 @@ import logo from './Assets/Logo.svg'
 
 function Header() {
     return(
-        <header>
+        <header class="row" id="row-header">
+            <div class="row-content" id="row-content-header">
             <img 
                 src={logo} 
                 alt="Little Lemon logo" 
@@ -18,6 +19,7 @@ function Header() {
                     <li><a href="/Login">Login</a></li>
                 </ul>
             </nav>
+            </div>
         </header>
     );
 }
