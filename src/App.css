@@ -32,6 +32,57 @@
   }
 }
 
+h1 {
+  font-size: 64px;
+  font-family: 'Markazi Text', serif;
+  font-weight:500;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Markazi Text', serif;
+  font-weight:normal;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+p.lead-text {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  font-weight: normal;
+}
+
+span.highlight {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+}
+
+
+
 ul {
   list-style-type: none;
 }
@@ -152,6 +203,10 @@ footer {
 footer a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  font-weight: normal;
 }
 footer img {
   height: 250px;
