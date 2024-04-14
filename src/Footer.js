@@ -10,7 +10,7 @@ function Footer () {
                 alt = "A chef preparing food"
                 height = {300}
             />
-            <div>
+            <div class="footer-nav-box">
                 <h3>Navigation</h3>
                 <nav>
                     <ul>
@@ -23,7 +23,7 @@ function Footer () {
                     </ul>
                 </nav>
             </div>
-            <div>
+            <div class="footer-nav-box">
                 <h3>Contact</h3>
                 <ul>
                     <li>Address</li>
@@ -31,7 +31,7 @@ function Footer () {
                     <li>Email</li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-nav-box">
                 <h3>Social media</h3>
                 <nav><ul>
                     <li><a href = "www.facebook.com">Facebook</a></li>
