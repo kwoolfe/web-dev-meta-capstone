@@ -1,3 +1,10 @@
+$primary-grey: #495E57;
+$primary-yellow: #F4CE14;
+$highlight-light: #EDEFEE;
+$heading-font-family: 'Markazi Text', serif;
+$p-font-family: 'Karla', sans-serif;
+$rounded-radius: 16px;
+
 * {
   margin: 0px;
   padding: 0px;
@@ -34,50 +41,50 @@
 
 h1 {
   font-size: 64px;
-  font-family: 'Markazi Text', serif;
+  font-family: $heading-font-family;
   font-weight:500;
 }
 
 h2 {
   font-size: 40px;
-  font-family: 'Markazi Text', serif;
+  font-family: $heading-font-family;
   font-weight:normal;
 }
 
 h3 {
   font-size: 20px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: 800;
 }
 
 h4 {
   font-size: 18px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: 700;
 }
 
 h5 {
   font-size: 16px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: 800;
 }
 
 p {
   font-size: 16px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: normal;
   line-height: 1.5;
 }
 
 p.lead-text {
   font-size: 18px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: normal;
 }
 
-span.highlight {
+p span.highlight {
   font-size: 16px;
-  font-family: 'Karla', sans-serif;
+  font-family: $p-font-family;
   font-weight: 500;
 }
 
@@ -189,7 +196,7 @@ header a {
 
 
 footer {
-  background-color: #495E57;
+  background-color: $primary-grey;
   color: white;
   min-height: 400px;
 }
@@ -233,6 +240,54 @@ footer img {
   }
 }
 
-#hero-row {
-  background-color: #495E57;
+#hero-section {
+  background-color: $primary-grey;
+
+  article {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+
+    button {
+      margin-bottom: 40px;
+      width: 160px;
+      height: 60px;
+      background-color: $primary-yellow;
+      color: $highlight-light;
+      font-weight:600;
+      border-radius: $rounded-radius;
+      border-width: 0px;
+    }
+  }
+
+  h1 {
+    color: $primary-yellow;
+    margin-top: 40px;
+  }
+  h2 {
+    color: $highlight-light;
+    margin-top: 20px;
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $highlight-light;
+    max-width: min(65ch, 75%);
+  }
+
+  img {
+    width: 100%;
+    border-radius: $rounded-radius;
+  }
+}
+
+#hero-row-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+button {
+  font-family: $p-font-family;
+  font-size: 16px;
 }
