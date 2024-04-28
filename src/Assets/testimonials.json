@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Sarah",
+        "rating": 5,
+        "picture": "profile_1.jpg",
+        "review": "What a delightful experience! The cozy ambiance and flavorful dishes made for a perfect evening out with friends."
+    },
+    {
+        "name": "Michael",
+        "rating": 5,
+        "picture": "profile_2.jpg",
+        "review": "Impressive service and exquisite cuisine; this restaurant truly sets the standard for fine dining in the city."
+    },
+    {
+        "name": "Jamal",
+        "rating": 5,
+        "picture": "profile_3.jpg",
+        "review": "A fantastic spot for health-conscious diners; fresh ingredients catering perfectly to my fitness-focused lifestyle."
+    },
+    {
+        "name": "Emily",
+        "rating": 4,
+        "picture": "profile_4.jpg",
+        "review": "A haven for foodies with a charming atmosphere and thoughtfully crafted menu - a must-visit!"
+    }
+]

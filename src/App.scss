@@ -43,6 +43,7 @@ h1 {
   font-size: 64px;
   font-family: $heading-font-family;
   font-weight:500;
+  color:$primary-grey;
 }
 
 h2 {
@@ -74,6 +75,7 @@ p {
   font-family: $p-font-family;
   font-weight: normal;
   line-height: 1.5;
+  color: $primary-grey;
 }
 
 p.lead-text {
@@ -85,7 +87,7 @@ p.lead-text {
 p span.highlight {
   font-size: 16px;
   font-family: $p-font-family;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 
@@ -290,4 +292,124 @@ footer img {
 button {
   font-family: $p-font-family;
   font-size: 16px;
+}
+
+
+#specials-row {
+grid-template-columns: 1fr 6fr 1fr;
+
+  h1 {
+    color:$primary-grey;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  #specials-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.special {
+  display: flex;
+  flex-direction: column;
+  background-color: $highlight-light;
+  border-radius: $rounded-radius;
+  flex: 0 0 260px;
+  min-height: 400px;
+
+  img {
+    width: 100%;
+    max-height: 180px;
+    border-radius: $rounded-radius;
+    flex: 0;
+  }
+
+  a {
+    margin-top: auto;
+    margin-bottom: 0px;
+    flex: 0;
+    font-weight: bold;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex: 1;
+}
+.card-header{
+  display: flex;
+  flex: 0;
+}
+.card-title {
+  display: inline;
+}
+.card-price {
+  display: inline;
+  margin-left: auto;
+  color: $primary-yellow;
+}
+.card-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+
+#customers-say-row{
+  grid-template-columns: 1fr 6fr 1fr;
+
+  h1 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+#testimonials-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+#testimonials-section {
+  margin-bottom: 80px;
+}
+.testimonial {
+  background-color: $highlight-light;
+  border-radius: $rounded-radius;
+  width: 200px;
+  display: flex;
+}
+.testimonial-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex: 1 1;
+
+  p {
+    margin-bottom: 10px;
+    flex: 1 1;
+  }
+}
+.testimonial-profile {
+    width: 100px;
+    aspect-ratio: 1/1.5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    flex: 0 1;
+}
+.review-star {
+  width: 20px;
+  height: 20px;
+  flex: 0 1;
 }

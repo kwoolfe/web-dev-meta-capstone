@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Greek Salad",
+        "description": "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons",
+        "price": "$12.99",
+        "image": "greek salad.jpg"
+    },
+    {
+        "name": "Bruschetta",
+        "description": "An Italian antipasto consisting of grilled bread topped with olive oil and salt",
+        "price": "$7.99",
+        "image": "bruchetta.svg"
+    },
+    {
+        "name": "Lemon dessert",
+        "description": "A delicious lemon layer cake to finish off your meal",
+        "price": "$5.99",
+        "image": "lemon dessert.jpg"
+    }
+]
