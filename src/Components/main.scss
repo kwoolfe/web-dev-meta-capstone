@@ -121,6 +121,13 @@ button {
 }
 
 
+#customers-say-section {
+    background-color: $primary-grey;
+
+    h1 {
+        color: $primary-yellow;
+    }
+}
 #customers-say-row{
     grid-template-columns: 1fr 6fr 1fr;
 
@@ -172,4 +179,49 @@ button {
     width: 20px;
     height: 20px;
     flex: 0 1;
+}
+
+#info-section {
+    min-height: 500px;
+    grid-template-columns: 1fr 6fr 1fr;
+    h2 {
+        color: $primary-yellow;
+    }
+
+    img {
+        width: 300px;
+        border-radius: $rounded-radius;
+    }
+}
+#info-row-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+#info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    flex-shrink: 1;
+}
+#info-right {
+    max-width: 500px;
+    min-width: 350ox;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-shrink: 0;
+}
+#info-img-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#info-img-2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
