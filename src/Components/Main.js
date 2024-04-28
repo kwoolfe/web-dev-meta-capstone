@@ -1,7 +1,8 @@
-import food_hero from './Assets/restauranfood.jpg'
-import specials from "./Assets/specials.json"
-import testimonials from "./Assets/testimonials.json"
-import star from "./Assets/star.png"
+import "./main.scss"
+import food_hero from "../Assets/restauranfood.jpg"
+import specials from "../Assets/specials.json"
+import testimonials from "../Assets/testimonials.json"
+import star from "../Assets/star.png"
 
 function Main() {
     return (
@@ -58,7 +59,7 @@ function SpecialCard (item) {
     return (
         <article class="special" id={item.name}>
             <img
-                src={require(`./Assets/${item.image}`)}
+                src={require(`../Assets/${item.image}`)}
                 alt="Food available to order"
                 width="100px"
             />
@@ -97,7 +98,7 @@ function CustomerCard (item) {
             <div class="testimonial-body">
                 <h4 class="testimonial-title">{item.name}</h4>
                 <img 
-                    src={require(`./Assets/${item.picture}`)}
+                    src={require(`../Assets/${item.picture}`)}
                     alt="Profile picture"
                     width="50px"
                     class="testimonial-profile"

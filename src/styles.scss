@@ -1,0 +1,67 @@
+$primary-grey: #495E57;
+$primary-yellow: #F4CE14;
+$highlight-light: #EDEFEE;
+$heading-font-family: 'Markazi Text', serif;
+$p-font-family: 'Karla', sans-serif;
+$rounded-radius: 16px;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+h1 {
+font-size: 64px;
+font-family: $heading-font-family;
+font-weight:500;
+color:$primary-grey;
+}
+
+h2 {
+font-size: 40px;
+font-family: $heading-font-family;
+font-weight:normal;
+}
+
+h3 {
+font-size: 20px;
+font-family: $p-font-family;
+font-weight: 800;
+}
+
+h4 {
+font-size: 18px;
+font-family: $p-font-family;
+font-weight: 700;
+}
+
+h5 {
+font-size: 16px;
+font-family: $p-font-family;
+font-weight: 800;
+}
+
+p {
+font-size: 16px;
+font-family: $p-font-family;
+font-weight: normal;
+line-height: 1.5;
+color: $primary-grey;
+}
+
+p.lead-text {
+font-size: 18px;
+font-family: $p-font-family;
+font-weight: normal;
+}
+
+p span.highlight {
+font-size: 16px;
+font-family: $p-font-family;
+font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+}

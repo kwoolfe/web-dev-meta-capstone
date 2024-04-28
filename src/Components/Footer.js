@@ -1,4 +1,5 @@
-import chef_image from './Assets/restaurant chef B.jpg'
+import "./footer.scss"
+import logo from '../Assets/grey_logo.png'
 
 function Footer () {
     return (
@@ -6,7 +7,7 @@ function Footer () {
         <div class="row" id="row-footer">
         <div class="row-content" id="footer-row-content">
             <img 
-                src = {chef_image}
+                src = {logo}
                 alt = "A chef preparing food"
                 height = {300}
             />
