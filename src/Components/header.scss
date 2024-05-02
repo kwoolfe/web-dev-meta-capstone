@@ -42,12 +42,12 @@ header a {
 
 @media only screen and (max-width: 700px) {
     header a {
-        font-size: 12px;
+        font-size: 16px;
     }
-    header img {
-        width: 150px;
-        height: auto;
-    }
+    //header img {
+    //    width: 150px;
+    //    height: auto;
+    //}
 }
 
 @media only screen and (max-width: 580px) {
@@ -66,9 +66,9 @@ header a {
     }
 }
 
-@media only screen and (max-width: 430px) {
-    header img {
-        width: 125px;
-        height: auto;
-    }
-}
+//@media only screen and (max-width: 430px) {
+//    header img {
+//        width: 125px;
+//        height: auto;
+//    }
+//}
