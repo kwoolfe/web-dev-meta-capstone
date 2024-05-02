@@ -32,12 +32,13 @@ function CallToAction() {
                         </p>
                     <button type="button">Reserve a table</button>
                 </article>
-
-                <img
-                    src={food_hero}
-                    alt="A server carrying a tracy of delicious food"
-                    width={417}
-                />
+                <div id="hero-right">
+                    <img
+                        src={food_hero}
+                        alt="A server carrying a tracy of delicious food"
+                        width={417}
+                    />
+                </div>
             </div>
         </div>
         </section>

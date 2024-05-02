@@ -4,6 +4,11 @@
 #hero-section {
 background-color: $primary-grey;
 
+    .row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     article {
         display: flex;
         flex-direction:column;
@@ -37,9 +42,14 @@ background-color: $primary-grey;
     }
 
     img {
-        width: 100%;
         border-radius: $rounded-radius;
+        position: absolute;
+        height: 500px;
     }
+}
+
+#hero-right {
+    position: relative;
 }
 
 #hero-row-content {
@@ -56,6 +66,8 @@ button {
 
 #specials-row {
     grid-template-columns: 1fr 6fr 1fr;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
     h1 {
         color:$primary-grey;
