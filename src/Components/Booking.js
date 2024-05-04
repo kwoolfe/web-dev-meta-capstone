@@ -1,4 +1,4 @@
-import "./main.scss"
+import './booking.scss'
 import {useState} from 'react'
 
 function BookingPage () {

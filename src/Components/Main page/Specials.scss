@@ -1,0 +1,74 @@
+
+@import "../../styles";
+
+@media only screen and (min-width: 1250px) {
+    #specials-row {
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+}
+#specials-row {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    h1 {
+        color:$primary-grey;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #specials-section {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.special {
+    display: flex;
+    flex-direction: column;
+    background-color: $highlight-light;
+    border-radius: $rounded-radius;
+    flex: 0 0 260px;
+    min-height: 400px;
+
+    img {
+      width: 100%;
+      max-height: 180px;
+      border-radius: $rounded-radius;
+      flex: 0;
+    }
+
+    a {
+      margin-top: auto;
+      margin-bottom: 0px;
+      flex: 0;
+      font-weight: bold;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    flex: 1;
+}
+.card-header{
+    display: flex;
+    flex: 0;
+}
+.card-title {
+    display: inline;
+}
+.card-price {
+    display: inline;
+    margin-left: auto;
+    color: $primary-yellow;
+}
+.card-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+}

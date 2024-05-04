@@ -1,0 +1,63 @@
+@import "../../styles.scss";
+
+
+#customers-say-section {
+    background-color: $primary-grey;
+
+    h1 {
+        color: $primary-yellow;
+        text-align: center;
+    }
+}
+
+
+#customers-say-row{
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 125px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+}
+
+#testimonials-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.testimonial {
+    background-color: $highlight-light;
+    border-radius: $rounded-radius;
+    width: 200px;
+    display: flex;
+}
+.testimonial-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex: 1 1;
+
+    p {
+        margin-bottom: 10px;
+        flex: 1 1;
+    }
+}
+.testimonial-profile {
+    width: 100px;
+    aspect-ratio: 1/1.5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    flex: 0 1;
+}
+.review-star {
+    width: 20px;
+    height: 20px;
+    flex: 0 1;
+}
