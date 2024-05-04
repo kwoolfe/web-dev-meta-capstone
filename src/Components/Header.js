@@ -1,5 +1,6 @@
 import './header.scss'
 import logo from '../Assets/Logo.svg'
+import {Link} from 'react-router-dom';
 
 function Header() {
     return(
@@ -12,12 +13,11 @@ function Header() {
             />
             <nav>
                 <ul>
-                    <li><a href="/Home">Home</a></li>
-                    <li><a href="/About">About</a></li>
-                    <li><a href="/Menu">Menu</a></li>
-                    <li><a href="/Reservations">Reservations</a></li>
-                    <li><a href="/Order">Order online</a></li>
-                    <li><a href="/Login">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to ="/About">About</Link></li>
+                    <li><Link to = "/Menu">Menu</Link></li>
+                    <li><Link to = "/Reservations">Reservations</Link></li>
+                    <li><Link to = "/Order">Order Online</Link></li>
                 </ul>
             </nav>
             </div>
