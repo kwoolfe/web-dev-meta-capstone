@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 
 function Header() {
     return(
-        <header class="row" id="row-header">
-            <div class="row-content" id="row-content-header">
+        <header className="row" id="row-header">
+            <div className="row-content" id="row-content-header">
             <img 
                 src={logo} 
                 alt="Little Lemon logo" 

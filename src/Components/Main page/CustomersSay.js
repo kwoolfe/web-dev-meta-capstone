@@ -4,8 +4,8 @@ import './CustomersSay.scss'
 function CustomersSay (props) {
     return (
         <section id="customers-say-section" >
-            <div class="row" id="customers-say-row">
-                <div class="row-content" id="customers-say-row-content">
+            <div className="row" id="customers-say-row">
+                <div className="row-content" id="customers-say-row-content">
                     <h1>Testimonials</h1>
                     <div id="testimonials-section">
                         {props.data.map(
@@ -20,22 +20,22 @@ function CustomersSay (props) {
 
 function CustomerCard (item) {
     return (
-        <article class="testimonial" id={item.name}>
-            <div class="testimonial-body">
-                <h4 class="testimonial-title">{item.name}</h4>
+        <article className="testimonial" id={item.name}>
+            <div className="testimonial-body">
+                <h4 className="testimonial-title">{item.name}</h4>
                 <img 
                     src={require(`../../Assets/${item.picture}`)}
                     alt="Profile picture"
                     width="50px"
-                    class="testimonial-profile"
+                    className="testimonial-profile"
                 />
                 <p>{item.review}</p>
-                <div class="testimonial-stars">
+                <div className="testimonial-stars">
                     {new Array(item.rating).fill('').map(
                         (_, index) => <img 
                             src = {star}
                             id = {index}
-                            class = "review-star"
+                            className = "review-star"
                         />
                     )}
                 </div>

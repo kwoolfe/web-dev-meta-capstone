@@ -4,14 +4,14 @@ import logo from '../Assets/grey_logo.png'
 function Footer () {
     return (
         <footer>
-        <div class="row" id="row-footer">
-        <div class="row-content" id="footer-row-content">
+        <div className="row" id="row-footer">
+        <div className="row-content" id="footer-row-content">
             <img 
                 src = {logo}
                 alt = "A chef preparing food"
                 height = {300}
             />
-            <div class="footer-nav-box">
+            <div className="footer-nav-box">
                 <h3>Navigation</h3>
                 <nav>
                     <ul>
@@ -24,7 +24,7 @@ function Footer () {
                     </ul>
                 </nav>
             </div>
-            <div class="footer-nav-box">
+            <div className="footer-nav-box">
                 <h3>Contact</h3>
                 <ul>
                     <li>Address</li>
@@ -32,7 +32,7 @@ function Footer () {
                     <li>Email</li>
                 </ul>
             </div>
-            <div class="footer-nav-box">
+            <div className="footer-nav-box">
                 <h3>Social media</h3>
                 <nav><ul>
                     <li><a href = "www.facebook.com">Facebook</a></li>

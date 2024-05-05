@@ -5,8 +5,8 @@ import './RestaurantInfo.scss'
 
 function RestaurantInfo (props) {
     return (
-        <section class="row" id="info-section">
-            <div class="row-content" id="info-row-content">
+        <section className="row" id="info-section">
+            <div className="row-content" id="info-row-content">
                 <article id="info-left">
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>

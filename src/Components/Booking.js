@@ -3,12 +3,16 @@ import {useState} from 'react'
 
 function BookingPage (props) {
     return (
-        <section class="row">
-            <div class="row-content">
-                <BookingForm
-                    availableTimes = {props.availableTimes}
-                    setAvailableTimes = {props.setAvailableTimes}
-                />
+        <section className="row">
+            <div className="row-content">
+                <h1>Reserve a table</h1>
+                <h2>Little Lemon Chicage</h2>
+                <div id="booking-form-box">
+                    <BookingForm
+                        availableTimes = {props.availableTimes}
+                        setAvailableTimes = {props.setAvailableTimes}
+                    />
+                </div>
             </div>
         </section>
     )
@@ -26,6 +30,8 @@ function BookingForm(props) {
     }
 
     return (
+        <>
+        <h3>Book Now</h3>
         <form>
             <div>
                 <label htmlFor="res-date">Choose date</label>
@@ -73,8 +79,13 @@ function BookingForm(props) {
                     <option>Anniversary</option>
                 </select>
             </div>
-            <input type="submit" value="Make Your reservation"/>
+            <input
+                id="submit-buttom" 
+                type="submit" 
+                value="Make Your reservation"
+            />
         </form>
+        </>
     )
 }
 

@@ -6,11 +6,13 @@ import BookingPage from './Components/Booking'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {useReducer} from 'react'
 
+const initialTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+function updateTimes (prev_times, date) {
+  return initialTimes;
+}
+
 function App() {
-  const initialTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-  function updateTimes (prev_times, date) {
-    return initialTimes;
-  }
+
   const [availableTimes, setAvailableTimes] = useReducer(
     updateTimes, initialTimes
   )

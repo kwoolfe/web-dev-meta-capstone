@@ -5,8 +5,8 @@ import './CallToAction.scss'
 function CallToAction() {
     return (
         <section id="hero-section">
-        <div class="row" id="hero-row">
-            <div class="row-content" id="hero-row-content">
+        <div className="row" id="hero-row">
+            <div className="row-content" id="hero-row-content">
                 <article id="hero-content-left">
                     <h1 id="hero-title">Little Lemon</h1>
                         <h2 id="hero-subtitle">Chicago</h2>
