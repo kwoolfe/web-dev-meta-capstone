@@ -1,24 +1,29 @@
 import './booking.scss'
 import {useState} from 'react'
 
-function BookingPage () {
+function BookingPage (props) {
     return (
         <section class="row">
             <div class="row-content">
-                <BookingForm />
+                <BookingForm
+                    availableTimes = {props.availableTimes}
+                    setAvailableTimes = {props.setAvailableTimes}
+                />
             </div>
         </section>
     )
 }
 
-function BookingForm() {
+function BookingForm(props) {
     const [date, setDate] = useState();
     const [time, setTime] = useState();
     const [guests, setGuests] = useState();
     const [occasion, setOccasion] = useState();
-    const [availableTimes, setAvailableTimes] = useState(
-        ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']
-    )
+
+    const changeDate = (e) => {
+        props.setAvailableTimes(e.target.data)
+        setDate(e.target.value)
+    }
 
     return (
         <form>
@@ -28,7 +33,7 @@ function BookingForm() {
                     type="date"
                     id="res-date"
                     value={date}
-                    onChange={(e) => setDate(e.target.value)}
+                    onChange={changeDate}
                 />
             </div>
             <div>
@@ -39,7 +44,7 @@ function BookingForm() {
                     onChange={(e) => setTime(e.target.value)}
                 >
                     {
-                        availableTimes.map(
+                        props.availableTimes.map(
                            (time) => (<option>{time}</option>)
                         )
                     }
