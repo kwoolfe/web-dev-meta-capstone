@@ -35,6 +35,7 @@ function CustomerCard (item) {
                         (_, index) => <img 
                             src = {star}
                             id = {index}
+                            key = {index}
                             className = "review-star"
                         />
                     )}

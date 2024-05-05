@@ -17,7 +17,7 @@ function Specials (props) {
 
 function SpecialCard (item) {
     return (
-        <article className="special" id={item.name}>
+        <article className="special" id={item.name} key={item.name}>
             <img
                 src={require(`../../Assets/${item.image}`)}
                 alt="Food available to order"

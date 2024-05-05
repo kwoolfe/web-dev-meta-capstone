@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import BookingPage from './Booking';
+import BookingPage from './Booking/Booking';
 import {initializeTimes, updateTimes} from '../App';
 
 

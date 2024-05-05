@@ -37,7 +37,7 @@ const availableTimesByDate = {
   }
 
   const submitAPI = (formData) => {
-    
+
     availableTimesByDate[formData.date] = availableTimesByDate[formData.date].filter(time => time !== formData.time);
 
     return new Promise((resolve, reject) => {

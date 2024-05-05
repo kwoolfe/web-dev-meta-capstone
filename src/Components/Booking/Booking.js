@@ -1,17 +1,21 @@
 import './booking.scss'
-import {useState} from 'react'
+import {useState, useReducer, useEffect} from 'react'
+import { fetchAPI } from '../../API/api';
+
+function initializeTimes () {
+    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+}
+
 
 function BookingPage (props) {
+
     return (
         <section className="row">
             <div className="row-content">
                 <h1>Reserve a table</h1>
                 <h2>Little Lemon Chicage</h2>
                 <div id="booking-form-box">
-                    <BookingForm
-                        availableTimes = {props.availableTimes}
-                        setAvailableTimes = {props.setAvailableTimes}
-                    />
+                    <BookingForm />
                 </div>
             </div>
         </section>
@@ -19,15 +23,21 @@ function BookingPage (props) {
 }
 
 function BookingForm(props) {
-    const [date, setDate] = useState();
+    const [date, setDate] = useState(new Date());
     const [time, setTime] = useState();
-    const [guests, setGuests] = useState();
+    const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState();
+    const [availableTimes, setAvailableTimes] = useState(
+        initializeTimes()
+    );
 
-    const changeDate = (e) => {
-        props.setAvailableTimes(e.target.data)
-        setDate(e.target.value)
-    }
+
+    useEffect(() => {
+        fetchAPI(date)
+        .then(data => setAvailableTimes(data))
+        .then(console.log(availableTimes));
+    }, [date]);
+
 
     return (
         <>
@@ -38,8 +48,8 @@ function BookingForm(props) {
                 <input
                     type="date"
                     id="res-date"
-                    value={date}
-                    onChange={changeDate}
+                    value={date.toISOString().slice(0, 10)}
+                    onChange={(e)=>setDate(new Date(e.target.value))}
                 />
             </div>
             <div>
@@ -50,7 +60,7 @@ function BookingForm(props) {
                     onChange={(e) => setTime(e.target.value)}
                 >
                     {
-                        props.availableTimes.map(
+                        availableTimes.map(
                            (time) => (<option>{time}</option>)
                         )
                     }
@@ -88,5 +98,15 @@ function BookingForm(props) {
         </>
     )
 }
+
+
+function ConfirmedBooking (props) {
+    return (
+        <>
+            <h2>Your booking is confirmed</h2>
+        </>
+    );
+}
+
 
 export default BookingPage;
