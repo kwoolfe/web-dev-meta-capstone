@@ -1,6 +1,7 @@
 import './booking.scss'
-import {useState, useReducer, useEffect} from 'react'
-import { fetchAPI } from '../../API/api';
+import {useState, useEffect} from 'react'
+import { fetchAPI, submitAPI } from '../../API/api';
+import {useNavigate} from 'react-router-dom';
 
 function initializeTimes () {
     return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
@@ -30,6 +31,8 @@ function BookingForm(props) {
     const [availableTimes, setAvailableTimes] = useState(
         initializeTimes()
     );
+    const [failedToSubmit, setFailedToSubmit] = useState(false)
+    const [submitted, setSubmitted] = useState()
 
 
     useEffect(() => {
@@ -39,10 +42,24 @@ function BookingForm(props) {
     }, [date]);
 
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        submitAPI(e).then((value) => {setSubmitted(value)});
+    }
+
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (submitted) {
+            navigate('/booking-confirmed')
+        } else {
+            setFailedToSubmit(true)
+        }
+    }, [submitted])
+
     return (
         <>
         <h3>Book Now</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="res-date">Choose date</label>
                 <input
@@ -108,5 +125,4 @@ function ConfirmedBooking (props) {
     );
 }
 
-
-export default BookingPage;
+export {BookingPage, ConfirmedBooking};

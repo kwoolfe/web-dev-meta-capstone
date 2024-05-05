@@ -45,7 +45,7 @@ const availableTimesByDate = {
         if (formData) {
           resolve(true); // Simulate successful submission
         } else {
-          reject(new Error('Form submission failed.'));
+          resolve(false);
         }
       }, 1000); // Simulate API delay
     });

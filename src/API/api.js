@@ -33,3 +33,16 @@ export const fetchAPI = function (date) {
         }, 1000)
     });
 };
+
+export const submitAPI = function(formData) {
+    let success = Math.random() < 0.5;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (success) {
+                resolve(true);
+            } else {
+                resolve(true);
+            }
+        }, 1000);
+    });
+};
