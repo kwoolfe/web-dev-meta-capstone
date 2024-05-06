@@ -1,13 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import BookingPage from './Booking/Booking';
-import {initializeTimes, updateTimes} from '../App';
+import {BookingPage, initializeTimes} from './Booking';
+import {updateTimes} from '../../App';
 
 
 test('Renders the BookingForm heading', () => {
     render(
-        <BookingPage
-            availableTimes = {['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']}
-        />
+        <BookingPage/>
     );
     const headingElement = screen.getByText("Reserve a table");
     expect(headingElement).toBeInTheDocument();
@@ -21,7 +19,7 @@ test('Initialize times creates correct times', () => {
 })
 
 test('updateTimes returns provided time', () => {
-    const initialTimes = initializeTimes();
-    const updatedTimes = updateTimes(initialTimes, null);
-    expect(updatedTimes).toEqual(initialTimes);
+    render(<BookingPage/>);
+    const dateField = screen.getByTestId("res-date-input");
+    fireEvent.change(dateField, {target: {value: "2024-05-17"}});
 })

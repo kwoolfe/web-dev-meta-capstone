@@ -4,7 +4,9 @@ import { fetchAPI, submitAPI } from '../../API/api';
 import {useNavigate} from 'react-router-dom';
 
 function initializeTimes () {
-    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+    return ['17:00', '17:30', '18:00', '18:30', '19:00',
+            '19:30', '20:00', '20:30', '21:00',
+            '21:30',  '22:00'];
 }
 
 
@@ -24,21 +26,28 @@ function BookingPage (props) {
 }
 
 function BookingForm(props) {
-    const [date, setDate] = useState(new Date());
+    const [date, setDate] = useState();
+    const [dateChanged, setDateChanged] = useState(false)
     const [time, setTime] = useState();
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState();
     const [availableTimes, setAvailableTimes] = useState(
         initializeTimes()
     );
-    const [failedToSubmit, setFailedToSubmit] = useState(false)
+    const [failedToSubmit, setFailedToSubmit] = useState()
     const [submitted, setSubmitted] = useState()
 
 
+    const handleDate = (e) => {
+        setDateChanged(true);
+        setDate(new Date(e.target.value));
+    };
+
     useEffect(() => {
-        fetchAPI(date)
-        .then(data => setAvailableTimes(data))
-        .then(console.log(availableTimes));
+        if (dateChanged) {
+            fetchAPI(date)
+            .then(data => setAvailableTimes(data))
+        }
     }, [date]);
 
 
@@ -52,7 +61,9 @@ function BookingForm(props) {
         if (submitted) {
             navigate('/booking-confirmed')
         } else {
-            setFailedToSubmit(true)
+            if (submitted !== undefined) {
+                setFailedToSubmit(true)
+            }
         }
     }, [submitted])
 
@@ -65,20 +76,25 @@ function BookingForm(props) {
                 <input
                     type="date"
                     id="res-date"
-                    value={date.toISOString().slice(0, 10)}
-                    onChange={(e)=>setDate(new Date(e.target.value))}
+                    data-test-id="res-date-input"
+                    value={
+                        dateChanged ?
+                        date.toISOString().slice(0, 10) :
+                        ''
+                    }
+                    onChange={handleDate}
                 />
             </div>
             <div>
                 <label htmlFor="res-time">Choose time</label>
                 <select
-                    id="res-time "
+                    id="res-time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                 >
                     {
                         availableTimes.map(
-                           (time) => (<option>{time}</option>)
+                           (time) => (<option key={time}>{time}</option>)
                         )
                     }
                 </select>
@@ -107,10 +123,13 @@ function BookingForm(props) {
                 </select>
             </div>
             <input
-                id="submit-buttom" 
-                type="submit" 
+                id="submit-buttom"
+                type="submit"
                 value="Make Your reservation"
             />
+            <p id="submit-failed-p">{
+                failedToSubmit ? 'Failed to submit reservation' : ''
+            }</p>
         </form>
         </>
     )

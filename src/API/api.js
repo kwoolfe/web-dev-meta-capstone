@@ -13,15 +13,16 @@ export const fetchAPI = function (date) {
     const result = ["17:00"];
     const random = seedrandom(date);
 
-    console.log(date.getDate())
-
     var num;
-    for (let i = 18; i <= 23; i++) {
+    for (let i = 18; i <= 22; i++) {
         num = random();
         if (num < 0.5) {
             result.push(i + ":00");
         }
         num = random();
+        if (i==22) {
+            break;
+        }
         if (num < 0.5) {
             result.push(i + ":30");
         }
@@ -35,13 +36,13 @@ export const fetchAPI = function (date) {
 };
 
 export const submitAPI = function(formData) {
-    let success = Math.random() < 0.5;
+    let success = Math.random() < 0.9;
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (success) {
                 resolve(true);
             } else {
-                resolve(true);
+                resolve(false);
             }
         }, 1000);
     });
