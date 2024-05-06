@@ -20,10 +20,10 @@ function CustomersSay (props) {
 
 function CustomerCard (item) {
     return (
-        <article className="testimonial" id={item.name}>
+        <article className="testimonial" key={item.name}>
             <div className="testimonial-body">
                 <h4 className="testimonial-title">{item.name}</h4>
-                <img 
+                <img
                     src={require(`../../Assets/${item.picture}`)}
                     alt="Profile picture"
                     width="50px"
