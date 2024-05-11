@@ -98,7 +98,9 @@ function BookingForm(props) {
                     onBlur = {formik.handleBlur}
                 />
                 {(formik.errors.name && formik.touched.name)
-                 ? <div className="form-error">{formik.errors.name}</div>
+                 ? <div className="form-error" test-id="name-error">
+                        {formik.errors.name}
+                    </div>
                  : null}
             </div>
             <div>
@@ -136,7 +138,9 @@ function BookingForm(props) {
                 }
                 </select>
                 {(formik.errors.time && formik.touched.time)
-                  ? <div className="form-error">{formik.errors.time}</div>
+                  ? <div className="form-error">
+                        {formik.errors.time}
+                    </div>
                   : null}
             </div>
             <div>
@@ -172,7 +176,8 @@ function BookingForm(props) {
                   : null}
             </div>
             <input
-                id="submit-buttom"
+                id="submit-button"
+                test-id="submit-button"
                 type="submit"
                 value="Make Your reservation"
                 disabled={

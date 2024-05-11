@@ -27,7 +27,7 @@ export const fetchAPI = function (date) {
 };
 
 export const submitAPI = function(formData) {
-    let success = Math.random() < 0.9;
+    let success = Math.random() < 1.1;
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (success) {
