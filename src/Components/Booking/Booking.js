@@ -15,11 +15,11 @@ function initializeTimes () {
 function BookingPage (props) {
 
     return (
-        <section className="row">
-            <div className="row-content">
-                <h1>Reserve a table</h1>
-                <h2>Little Lemon Chicage</h2>
-                <div id="booking-form-box">
+        <section className="row booking">
+            <div className="row-content booking">
+                <h1 className="booking">Reserve a table</h1>
+                <h2 className="booking">Little Lemon Chicago</h2>
+                <div id="booking-form-box" className="booking">
                     <BookingForm />
                 </div>
             </div>
@@ -34,7 +34,7 @@ function BookingForm(props) {
             name: "",
             date: '',
             time: undefined,
-            guests: 2,
+            guests: undefined,
             occasion: undefined,
         },
         onSubmit: (values) => {},
@@ -86,13 +86,13 @@ function BookingForm(props) {
 
     return (
         <>
-        <h3>Book Now</h3>
-        <form onSubmit={handleSubmit}>
+        <form className="booking" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="res-name">Name</label>
                 <input
                     id="res-name"
                     name="name"
+                    placeholder='Name for the booking'
                     value={formik.values.name}
                     onChange = {formik.handleChange}
                     onBlur = {formik.handleBlur}
@@ -127,17 +127,20 @@ function BookingForm(props) {
                     id="res-time"
                     name="time"
                     type="string"
+                    placeholder="Select time to book"
                     value={formik.values.time}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                 >
+                    <option value="">Select a time</option>
                 {
                     availableTimes.map(
-                        (time) => (<option key={time}>{time}</option>)
+                        (time) => (<option key={time} value={time}>{time}</option>)
                     )
                 }
                 </select>
-                {(formik.errors.time && formik.touched.time)
+                {((formik.errors.time || formik.values.time === "")
+                   && formik.touched.time)
                   ? <div className="form-error">
                         {formik.errors.time}
                     </div>
@@ -147,8 +150,10 @@ function BookingForm(props) {
                 <label htmlFor="guests">Number of guests</label>
                 <input
                     type="number"
-                    placeholder="1"
+                    placeholder="Select number of guests"
                     id="guests"
+                    min={1}
+                    max={10}
                     value={formik.values.guests}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -158,7 +163,10 @@ function BookingForm(props) {
                   : null}
             </div>
             <div>
-                <label htmlFor="occasion">Occasion</label>
+                <div>
+                <label htmlFor="occasion" id="occasion-label">Occasion</label> 
+                <p id="occasion-optional">(Optional)</p>
+                </div>
                 <select
                     id="occasion"
                     name="occasion"
