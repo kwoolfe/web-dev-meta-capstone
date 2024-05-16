@@ -11,7 +11,7 @@ header .row-content {
     align-items: center;
 }
 
-header img {
+header img:first-of-type {
     flex-grow: 0;
 }
 
@@ -40,31 +40,56 @@ header a {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 700px) {
-    header a {
-        font-size: 16px;
-    }
-    //header img {
-    //    width: 150px;
-    //    height: auto;
-    //}
+header button {
+    display: none;
+    background-color: white;
+}
+header button:hover {
+    background-color: white;
 }
 
-@media only screen and (max-width: 580px) {
-    header .row-content {
-        display: block;
+@media only screen and (max-width: 750px) {
+    header button {
+        display: inline;
+        margin-left: auto;
     }
-    header nav {
-        justify-content: center;
+
+    header .row-content {
+         flex-wrap: wrap;
+         display: flex;
+    }
+    header img {
+        display: inline;
+    }
+    #hamburger-menu {
+        margin-left: auto;
+        margin-right: 0px;
     }
     header ul {
-        min-width:auto;
+        width: 100%;
+    }
+    header nav {
+        margin-left: 0px;
+        margin-top: 20px;
     }
     header li {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: block;
+        width: 100%;
     }
 }
+
+// @media only screen and (max-width: 580px) {
+//     header nav {
+//         justify-content: center;
+//     }
+//     header ul {
+//         min-width:auto;
+//     }
+//     header li {
+//         margin-top: 5px;
+//         margin-bottom: 5px;
+//     }
+// }
 
 //@media only screen and (max-width: 430px) {
 //    header img {

@@ -4,9 +4,9 @@ function Specials (props) {
     return (
         <section className="row" id="specials-row">
             <div className="row-content" id="specials-row-content">
-                <div>
-                <h1>This week's specials!</h1>
-                <button>Online menu</button>
+                <div id="specials-header">
+                    <h1>This week's specials</h1>
+                    <button>Online menu</button>
                 </div>
                 <div id="specials-section">
                     {props.data.map(

@@ -86,12 +86,14 @@ ul {
 button {
   height: 50px;
   background-color: $primary-yellow;
-  color: $highlight-light;
+  color: white;
   font-weight: 600;
   font-family: $p-font-family;
   font-size: 16px;
   border-radius: $rounded-radius;
   border-width: 0px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 button:hover {
