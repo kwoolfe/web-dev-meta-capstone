@@ -57,7 +57,17 @@
       margin-bottom: 0px;
       flex: 0;
       font-weight: bold;
+      text-decoration: none;
+      color: $primary-grey;
     }
+
+    a:hover {
+        color: black;
+    }
+}
+
+.special:hover {
+    scale: 1.05;
 }
 
 .card-body {

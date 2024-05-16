@@ -1,5 +1,6 @@
 import "./footer.scss"
 import logo from '../Assets/grey_logo.png'
+import { Link } from "react-router-dom";
 
 function Footer () {
     return (
@@ -15,29 +16,29 @@ function Footer () {
                 <h3>Navigation</h3>
                 <nav>
                     <ul>
-                        <li><a href="/Home">Home</a></li>
-                        <li><a href="/About">About</a></li>
-                        <li><a href="/Menu">Menu</a></li>
-                        <li><a href="/Reservations">Reservations</a></li>
-                        <li><a href="/Order">Order online</a></li>
-                        <li><a href="/Login">Login</a></li>
+                        <li><Link to="/Home">Home</Link></li>
+                        <li><Link to="/About">About</Link></li>
+                        <li><Link to="/Menu">Menu</Link></li>
+                        <li><Link to="/Reservations">Reservations</Link></li>
+                        <li><Link to="/Order">Order online</Link></li>
+                        <li><Link to="/Login">Login</Link></li>
                     </ul>
                 </nav>
             </div>
             <div className="footer-nav-box">
                 <h3>Contact</h3>
-                <ul>
-                    <li>Address</li>
-                    <li>Phone number</li>
-                    <li>Email</li>
+                <ul id="footer-contact">
+                    <li>123 Food Street, Chicago</li>
+                    <li>(00) 4321 4567 21</li>
+                    <li>hello@littlelemon.com</li>
                 </ul>
             </div>
             <div className="footer-nav-box">
                 <h3>Social media</h3>
                 <nav><ul>
-                    <li><a href = "www.facebook.com">Facebook</a></li>
-                    <li><a href = "www.instagram.com">Instagram</a></li>
-                    <li><a href = "twitter.com">Twitter</a></li>
+                    <li><a href = "//www.facebook.com">Facebook</a></li>
+                    <li><a href = "//www.instagram.com">Instagram</a></li>
+                    <li><a href = "//twitter.com">Twitter</a></li>
                 </ul></nav>
             </div>
         </div>

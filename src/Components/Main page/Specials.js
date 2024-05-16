@@ -1,4 +1,5 @@
 import './Specials.scss'
+import { Link } from 'react-router-dom';
 
 function Specials (props) {
     return (
@@ -6,7 +7,9 @@ function Specials (props) {
             <div className="row-content" id="specials-row-content">
                 <div id="specials-header">
                     <h1>This week's specials</h1>
-                    <button>Online menu</button>
+                    <Link to="/Menu">
+                        <button>Online menu</button>
+                    </Link>
                 </div>
                 <div id="specials-section">
                     {props.data.map(
@@ -34,7 +37,7 @@ function SpecialCard (item) {
                     </p>
                 </div>
                 <p className="card-description">{item.description}</p>
-                <a>Order online</a>
+                <Link to="/Order">Order online</Link>
             </div>
         </article>
     )

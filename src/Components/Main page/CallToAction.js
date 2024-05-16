@@ -1,6 +1,7 @@
 
 import food_hero from "../../Assets/restauranfood.jpg"
 import './CallToAction.scss'
+import { Link } from "react-router-dom";
 
 function CallToAction() {
     return (
@@ -14,7 +15,9 @@ function CallToAction() {
                             We are a family owned Mediterranean restaurant,
                             focused on traditional recipes served with a modern twist.
                         </p>
-                    <button type="button">Reserve a table</button>
+                    <Link to="/Reservations">
+                        <button type="button">Reserve a table</button>
+                    </Link>
                 </article>
                 <div id="hero-right">
                     <img

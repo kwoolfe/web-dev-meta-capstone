@@ -39,6 +39,9 @@ header a {
     color: $primary-grey;
     text-decoration: none;
 }
+header a:hover {
+    color: black;
+}
 
 header button {
     display: none;
