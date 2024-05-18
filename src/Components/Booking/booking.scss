@@ -38,7 +38,7 @@ h2.booking {
     color: $primary-yellow;
     font-size: 36px;
 }
-h3 {
+h3.booking {
     color: $primary-grey;
 }
 
@@ -65,10 +65,10 @@ form {
     display: grid;
     gap: 20px;
     width: 100%;
-}
 
-form div {
-    width: 100%;
+    div {
+        width: 100%;
+    }
 }
 
 label {
