@@ -36,11 +36,11 @@ test('updateTimes returns provided time', async () => {
 
     const timeSelector = screen.getByLabelText('Choose time');
     const options = screen.getAllByRole('option', {container: timeSelector});
-    expect(options[0]).toHaveTextContent('17:00')
-    expect(options[1]).toHaveTextContent('18:00')
-    expect(options[2]).toHaveTextContent('18:30')
-    expect(options[3]).toHaveTextContent('19:00')
-    expect(options[4]).toHaveTextContent('20:30')
+    expect(options[1]).toHaveTextContent('17:00')
+    expect(options[2]).toHaveTextContent('18:00')
+    expect(options[3]).toHaveTextContent('18:30')
+    expect(options[4]).toHaveTextContent('19:00')
+    expect(options[5]).toHaveTextContent('20:30')
 
     expect(screen.queryByText('17:30')).toBeNull();
     expect(screen.queryByText('19:30')).toBeNull();
